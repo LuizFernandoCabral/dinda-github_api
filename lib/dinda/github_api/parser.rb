@@ -2,9 +2,9 @@ module Dinda
   module GithubApi
     class Parser
       def self.parse(commits)
-        grouped = history.group_by {|item| item['commit']['author']['email']}
+        grouped = commits.group_by {|item| item['commit']['author']['email']}
 
-        output = Hash[
+        Hash[
           grouped.map do |key, item|
             author = item[0]['commit']['author'].clone
             author.merge!(item[0]['author']) if item[0]['author']
@@ -20,8 +20,6 @@ module Dinda
             [key, infos]
           end
         ]
-
-        output
       end
     end
   end
