@@ -2,7 +2,13 @@
 
 ## Usage
 
-TODO: Write usage instructions here
+In the root of the project run:
+`ruby lib/dinda/github_api.rb`
+
+## Tests
+
+In the root of the prject run:
+`ruby tests/tests.rb`
 
 ## Development
 
