@@ -16,6 +16,8 @@ module Dinda
           response = Net::HTTP.get_response URI(BASE_URL +
             "#{repo}/commits?page=#{current_page}&per_page=#{per_page}")
 
+          break unless response.kind_of? Net::HTTPSuccess
+
           page_commits = JSON.parse(response.body)
 
           @@commits[repo] += page_commits
@@ -27,6 +29,14 @@ module Dinda
         end
 
         @@commits[repo]
+      end
+
+      def self.commits
+        @@commits
+      end
+
+      def self.clear
+        @@commits = Hash.new
       end
 
     end
