@@ -6,6 +6,10 @@ In the root of the project run:
 
 `ruby lib/dinda/github_api.rb`
 
+You can pass an argument to specify the repository (under user dinda-com-br)
+
+`ruby lib/dinda/github_api.rb braspag-rest` (Default: *braspag-rest*)
+
 ## Tests
 
 In the root of the prject run:
