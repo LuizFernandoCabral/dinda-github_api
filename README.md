@@ -18,7 +18,7 @@ In the root of the prject run:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dinda-github_api.
+Bug reports and pull requests are welcome on GitHub at https://github.com/LuizFernandoCabral/dinda-github_api.
 
 ## License
 
